@@ -6,14 +6,15 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 19:41:59 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/13 12:53:51 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/13 17:25:11 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
+
+# include <unistd.h>
+# include <stdlib.h>
 
 int		ft_isdigit(int ch);
 int		ft_isascii(int c);
