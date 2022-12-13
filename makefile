@@ -5,7 +5,7 @@ CFLAGS	= -Wall -Wextra -Werror
 NAME	= *.c
 OBJECTS	= $(NAME:.c=.o)
 
-all:*.o
+all:
 	$(CC) $(CFLAGS) $(NAME) -o libft
 
 clean:

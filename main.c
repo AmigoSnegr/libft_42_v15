@@ -6,7 +6,7 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 19:42:08 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/12 21:42:27 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/13 11:35:46 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,8 @@
 
 int main(void)
 {
-    char    c = '/';
-    int     res = ft_isalnum(c);
-
-    printf("res = %d", res);
+    char    c[] = "apple";
+    
+    printf("res = %ld", ft_strlen(c));
     return 0;
 }
