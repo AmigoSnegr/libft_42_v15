@@ -6,18 +6,18 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 19:41:50 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/12 20:22:50 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/13 12:48:13 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int ch)
+int	ft_isdigit(int ch)
 {
-    if (ch >= '0' && ch <= '9')
-    {
-        return (1);
-    }
-    else
-        return (0);
+	if (ch >= '0' && ch <= '9')
+	{
+		return (1);
+	}
+	else
+		return (0);
 }
 
 // int main(void)

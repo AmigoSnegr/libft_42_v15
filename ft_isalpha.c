@@ -6,16 +6,16 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 20:06:13 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/12 20:22:43 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/13 12:50:40 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-    if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-    {
-        return (1);
-    }
-    else
-        return (0);
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	{
+		return (1);
+	}
+	else
+		return (0);
 }

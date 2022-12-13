@@ -6,14 +6,14 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 20:22:55 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/12 20:28:58 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/13 12:49:46 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if (c > 32 && c < 127)
-        return 1;
-    else
-        return 0;
+	if (c > 32 && c < 127)
+		return (1);
+	else
+		return (0);
 }

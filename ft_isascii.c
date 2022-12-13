@@ -6,16 +6,16 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 20:20:41 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/12 20:22:40 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/13 12:49:36 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    if (c >= 0 && c <= 127)
-    {
-        return 1;
-    }
-    else
-        return 0;
+	if (c >= 0 && c <= 127)
+	{
+		return (1);
+	}
+	else
+		return (0);
 }
