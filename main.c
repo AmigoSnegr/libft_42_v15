@@ -6,7 +6,7 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 19:42:08 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/14 18:51:20 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/14 18:53:49 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 int	main(void)
 {
 	const char str[] = "hello world!";
-	const char ch;
+	const char ch = 'e';
 	char *ret;
 
 	ret = ft_memchr(str, ch, ft_strlen(str));
