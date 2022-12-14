@@ -6,7 +6,7 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 19:41:59 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/14 19:20:35 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/14 20:11:50 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,11 @@ int		ft_atoi(const char *str);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strnstr(const char	*big, const char *little, size_t len);
 void	*ft_memchr(const void *str, int c, size_t n);
+int		ft_strncmp(const char *str1, const char *str2, size_t n);
+int		ft_toupper(int argument);
+int		ft_tolower(int argument);
+char	*ft_strrchr(const char *str, int c);
+int		ft_memcmp(const void *str1, const void *str2, size_t n);
+void 	*ft_memcpy(void *dest, const void * src, size_t n);
 
 #endif
