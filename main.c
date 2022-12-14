@@ -6,18 +6,21 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 19:42:08 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/13 20:23:54 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/14 10:26:26 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
 
 int	main(void)
 {
-	char	c[] = "-99t9";
-	printf("res = %d\n", ft_atoi(c));
-	printf("res = %d\n", atoi(c));
+	char	c[] = "apple";
+	char	a = 'p';
+	// char tmp[] = ft_strchr(c, a);
+	printf("res = %s\n", ft_strchr(c, a));
+	printf("res = %s\n", strchr(c, a));
 	return (0);
 }
