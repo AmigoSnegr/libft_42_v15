@@ -6,7 +6,7 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 19:42:08 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/14 10:26:26 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/14 18:51:20 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,16 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 int	main(void)
 {
-	char	c[] = "apple";
-	char	a = 'p';
-	// char tmp[] = ft_strchr(c, a);
-	printf("res = %s\n", ft_strchr(c, a));
-	printf("res = %s\n", strchr(c, a));
-	return (0);
+	const char str[] = "hello world!";
+	const char ch;
+	char *ret;
+
+	ret = ft_memchr(str, ch, ft_strlen(str));
+	printf("%s\n", ret);
+	return(0);
 }
