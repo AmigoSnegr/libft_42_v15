@@ -6,7 +6,7 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 10:12:11 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/14 10:46:00 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/14 19:20:15 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strchr(const char *str, int c)
 	{
 		if (*str == c)
 		{
-			return ((char*)str);
+			return ((char *)str);
 		}
 		str++;
 	}
