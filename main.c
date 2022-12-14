@@ -6,7 +6,7 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 19:42:08 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/14 20:28:31 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/14 20:52:39 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@
 
 int	main(void)
 {
-	char dest[] = "oldstring";
-	const char src[]  = "newstring";
+	char str[50];
 
-	printf("Before memmove dest = %s, src = %s\n", dest, src);
-	ft_memmove(dest, src, 9);
-	printf("After memmove dest = %s, src = %s\n", dest, src);
-	return(0);
+   strcpy(str,"I love 42 so much");
+   puts(str);
+
+   ft_memset(str,'$',7);
+   puts(str);
+   
+   return(0);
 }
