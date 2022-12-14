@@ -6,7 +6,7 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 19:42:08 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/14 20:11:30 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/14 20:28:31 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,11 @@
 
 int	main(void)
 {
-	const	char	src[50] = "http://www.tutorialspoint.com";
-	char 			dest[50];
-	
-	strcpy(dest,"Heloooo!!");
-	printf("Before memcpy dest = %s\n", dest);
-	ft_memcpy(dest, src, strlen(src)+1);
-	printf("After memcpy dest = %s\n", dest);
-	return (0);
+	char dest[] = "oldstring";
+	const char src[]  = "newstring";
+
+	printf("Before memmove dest = %s, src = %s\n", dest, src);
+	ft_memmove(dest, src, 9);
+	printf("After memmove dest = %s, src = %s\n", dest, src);
+	return(0);
 }
