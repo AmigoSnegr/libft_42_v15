@@ -6,7 +6,7 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 10:12:11 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/14 19:20:15 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/16 14:54:31 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	while (*str != 0)
+	while (*str)
 	{
 		if (*str == c)
 		{
@@ -22,5 +22,7 @@ char	*ft_strchr(const char *str, int c)
 		}
 		str++;
 	}
+	if (c == '\0')
+		return ((char *)str);
 	return (NULL);
 }

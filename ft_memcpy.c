@@ -6,7 +6,7 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 20:04:27 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/14 20:33:37 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/16 22:34:15 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	tmp1 = (char *)dest;
 	tmp2 = (char *)src;
 	i = 0;
+	if (!(dest || src))
+		return NULL;
 	while (n--)
 	{
 		tmp1[i] = tmp2[i];

@@ -6,7 +6,7 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 19:52:53 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/14 20:03:11 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/16 22:45:50 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	int		i;
 	int		c1;
 	int		c2;
-	char	*tmp1;
-	char	*tmp2;
+	unsigned char	*tmp1;
+	unsigned char	*tmp2;
 
-	tmp1 = (char *)str1;
-	tmp2 = (char *)str2;
+	tmp1 = (unsigned char *)str1;
+	tmp2 = (unsigned char *)str2;
 	i = 0;
-	while (tmp1[i] != 0 && n--)
+	while (n--)
 	{
 		c1 = tmp1[i];
 		c2 = tmp2[i];
