@@ -6,7 +6,7 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 21:03:27 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/16 22:36:37 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/18 22:05:04 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 void	ft_bzero(void *str, size_t n)
 {
-	while (n--)
-	{
-		*(char *)str = '\0';
-	}
+	ft_memset(str, '\0', n);
 }

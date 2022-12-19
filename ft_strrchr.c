@@ -6,17 +6,25 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 19:39:24 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/16 23:11:15 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/18 22:18:54 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *str, int c)
 {
 	const char	*ptr;
-	
-	while (*str != '\0')
+
+	if (*str == '\0')
+	{
+		return (NULL);
+	}
+	if (!ft_isascii(c))
+	{
+		return (NULL);
+	}
+	while (*str)
 	{
 		if (*str == c)
 		{
@@ -25,8 +33,8 @@ char	*ft_strrchr(const char *str, int c)
 		str++;
 	}
 	if (c == '\0')
-		ptr = str;
-	if (*ptr)
+		return ((char *)str);
+	if (*ptr != 0)
 		return ((char *)ptr);
-	return ((char *)str);
+	return (NULL);
 }

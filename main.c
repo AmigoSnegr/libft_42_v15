@@ -6,7 +6,7 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 19:42:08 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/18 20:48:36 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/19 14:42:58 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@
 // 	return (0);
 // }
 
-int	main(void)
-{
-	char	str[] = "fjаafj";
-	char	c = 'a';
-	printf("%s\n", strrchr(str, c));
+int main() {
+  char  *str1 = "";
+  char  *str2 = "AAAAAA";
+  printf("%d\n", ft_strncmp(str1, str2, 1));
+  return 0;
 }

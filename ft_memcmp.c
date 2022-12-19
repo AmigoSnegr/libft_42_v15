@@ -6,7 +6,7 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 19:52:53 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/16 22:45:50 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/18 21:13:49 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-	int		i;
-	int		c1;
-	int		c2;
+	int				i;
+	int				c1;
+	int				c2;
 	unsigned char	*tmp1;
 	unsigned char	*tmp2;
 

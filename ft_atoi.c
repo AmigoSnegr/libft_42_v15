@@ -6,7 +6,7 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 11:43:49 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/13 20:22:42 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/18 22:03:30 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,28 +16,26 @@
 
 static int	algorythm(const char *str, size_t i, int result, int minus)
 {
-	int	current;
-	int	next;
-
-	while (str[i] != 0)
+	while (i < ft_strlen(str))
 	{
-		current = ft_isdigit(str[i]);
-		next = ft_isdigit(str[i + 1]);
-		if ((current == 0 && next == 0)
-			|| (current == 0 && next != 0 && str[i] != '-'))
-			return (0);
-		if (str[0] == '-' && next != 0)
+		if ((!(str[i] >= 48 && str[i] <= 57))
+			&& (str[i] != '\f' && str[i] != '\t' && str[i] != '\n'
+				&& str[i] != '\r' && str[i] != '\v'
+				&& str[i] != '-' && str[i] != '+' && str[i] != ' '))
+			break ;
+		if (str[i] == '-' && str[i + 1] >= '0' && str[i + 1] <= '9')
 			minus = -1;
-		if (current != 0)
+		if (str[i] == '-' || str[i] == '+')
 		{
-			result = result * 10 + str[i] - 48;
-			if (current != 0 && next == 0)
+			if (result != 0)
 				break ;
-			if (result == 214748364 && str[i + 1] == '8' && minus == 1)
-			{
-				return (-2147483648);
-			}
+			if (str[i + 1] < '0' || str[i + 1] > '9')
+				break ;
 		}
+		if (str[i] >= '0' && str[i] <= '9')
+			result = (result * 10) + (str[i] - '0');
+		else if (result != 0)
+			break ;
 		i++;
 	}
 	return (result * minus);
