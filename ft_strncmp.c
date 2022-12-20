@@ -6,7 +6,7 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 19:22:07 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/19 14:45:47 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/19 14:49:52 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	int	i;
+	int				i;
 	unsigned char	c1;
 	unsigned char	c2;
 

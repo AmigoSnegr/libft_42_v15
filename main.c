@@ -6,7 +6,7 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 19:42:08 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/19 14:42:58 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/20 18:16:10 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@
 //     printf("The new string length is %ld\n", ft_strlcat(dest,src,size));
 // 	return (0);
 // }
-
-int main() {
-  char  *str1 = "";
-  char  *str2 = "AAAAAA";
-  printf("%d\n", ft_strncmp(str1, str2, 1));
-  return 0;
+int main()
+{
+	char	big[] = "something to look here";
+	char	little[] = "to";
+	printf("%s\n", ft_strnstr(big, little, ft_strlen(big)));
+	return (0);
 }

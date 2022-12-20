@@ -6,7 +6,7 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 20:34:04 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/16 12:28:09 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/19 21:37:56 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,27 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	cap;
-	size_t	i;
 	size_t	d_len;
+	size_t	s_len;
+	size_t	i;
+	size_t	j;
 
-	cap = dstsize - ft_strlen(dst);
-	i = 0;
 	d_len = ft_strlen(dst);
-	while (cap--)
+	s_len = ft_strlen(src);
+	if (dstsize == 0 || !dst)
+		return (s_len);
+	i = 0;
+	j = d_len;
+	if (d_len > dstsize)
+		return (s_len + dstsize);
+	else
 	{
-		dst[d_len + i] = src[i];
-		i++;
+		while (src[i] && (d_len + i) < dstsize)
+			dst[j++] = src[i++];
+		if ((d_len + i) == dstsize && d_len < dstsize)
+			dst[j - 1] = '\0';
+		else
+			dst[j] = '\0';
 	}
-	if (ft_strlen(dst) + ft_strlen(src) > dstsize)
-	{
-		return (dstsize);
-	}
-	return (ft_strlen(dst));
+	return (s_len + d_len);
 }

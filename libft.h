@@ -6,7 +6,7 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 19:41:59 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/18 21:14:41 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/20 13:42:36 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@ void	*ft_memset(void *str, int c, size_t n);
 void	ft_bzero(void *str, size_t n);
 size_t	ft_strlcat(char *restrict dst,
 			const char *restrict src, size_t dstsize);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 #endif
