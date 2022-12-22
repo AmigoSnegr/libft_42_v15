@@ -6,7 +6,7 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 13:12:12 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/16 22:43:41 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/21 17:28:48 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	{
 		if (*(char *)str == (char)c)
 		{
-			return ((char *)str);
+			return ((void *)str);
 		}
-		(char *)str++;
+		(void *)str++;
 	}
 	return (NULL);
 }

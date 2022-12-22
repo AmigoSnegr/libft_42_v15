@@ -6,7 +6,7 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 19:53:51 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/20 20:04:42 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/20 20:53:27 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,7 @@ char	*ft_strdup(const char *s)
 	if (dup == NULL)
 		return (NULL);
 	if (!s)
-	{
 		return (NULL);
-	}
-	
 	ft_strlcpy(dup, s, ft_strlen(s) + 1);
 	return (dup);
 }
