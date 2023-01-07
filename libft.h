@@ -6,7 +6,7 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 19:41:59 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/22 20:56:43 by dbizjano         ###   ########.fr       */
+/*   Updated: 2023/01/07 22:51:30 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,6 @@ void	ft_putnbr_fd(int n, int fd);
 void	ft_putchar_fd(char c, int fd);
 char	*ft_itoa(int num);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif
