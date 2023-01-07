@@ -6,7 +6,7 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 19:42:08 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/21 18:09:11 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/22 21:38:35 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,11 @@
 
 int main()
 {
-	// char	big[] = "something to look here";
-	// char	little[] = "to";
-	printf("%s\n", ft_itoa(1000));
+	char	src[] = "lorem ipsum dolor sit amet";
+	char	*dest;
+
+	dest = src + 1;
+	printf("%p\n", &dest);
+	printf("%p\n", ft_memmove(src, dest, 8));
 	return (0);
 }

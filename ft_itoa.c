@@ -6,46 +6,61 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 17:14:36 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/22 13:34:51 by dbizjano         ###   ########.fr       */
+/*   Updated: 2022/12/22 20:17:04 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int pwr(int num, size_t p);
-
-char *ft_itoa(int num)
+static	char	*assigment(long tmp, size_t bytes, int sign)
 {
-	size_t	bytes;
-	int		devider;
 	char	*ptr;
-	// size_t	i;
 
-	// i = 0;
-	bytes = 0;
-	devider = 100;
-	while (devider != 0)
-		devider = num / pwr(10, bytes++);
-	ptr = malloc(sizeof(char) * bytes);
-	while (bytes - 2)
+	if (tmp == 0)
 	{
-		ptr[bytes - 2] = (char)(num % pwr(10, bytes) + 48);
+		ptr = malloc(sizeof(char) * 2);
+		if (!(ptr))
+			return (NULL);
+		ptr[0] = '0';
+		ptr[1] = '\0';
+		return (ptr);
+	}
+	ptr = malloc(sizeof(char) * bytes + 1);
+	if (!(ptr))
+		return (NULL);
+	if (sign == -1)
+		ptr[0] = '-';
+	ptr[bytes] = '\0';
+	while (bytes > 0 && tmp >= 1)
+	{
+		ptr[bytes - 1] = tmp % 10 + 48;
+		tmp = tmp / 10;
 		bytes--;
 	}
-	// ptr[i] = '\0';
 	return (ptr);
 }
 
-static int	pwr(int	num, size_t p)
+char	*ft_itoa(int num)
 {
-	int	result;
+	size_t	bytes;
+	long	tmp;
+	int		sign;
+	long	tmp1;
 
-	result = 1;
-	while (p--)
+	tmp1 = num;
+	sign = 1;
+	bytes = 0;
+	if (tmp1 < 0)
 	{
-		result = result *num;
+		sign = -1;
+		bytes++;
 	}
-	return (result);
+	tmp1 = tmp1 * sign;
+	tmp = tmp1;
+	while (tmp1 >= 1)
+	{
+		tmp1 = tmp1 / 10;
+		bytes++;
+	}
+	return (assigment(tmp, bytes, sign));
 }
-
-
