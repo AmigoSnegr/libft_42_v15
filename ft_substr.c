@@ -6,7 +6,7 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 20:53:31 by dbizjano          #+#    #+#             */
-/*   Updated: 2023/01/07 23:00:47 by dbizjano         ###   ########.fr       */
+/*   Updated: 2023/01/07 23:52:48 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
+	if (!s)
+		return (NULL);
+	if ((size_t)start > ft_strlen(s))
+		return (ft_strdup(""));
 	substr = malloc(sizeof(char) * (len + 1));
 	if (!substr)
 		return (NULL);
