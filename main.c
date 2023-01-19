@@ -6,7 +6,7 @@
 /*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 19:42:08 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/22 21:38:35 by dbizjano         ###   ########.fr       */
+/*   Updated: 2023/01/17 18:53:31 by dbizjano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
+
 
 // int	main(void)
 // {
@@ -34,11 +35,15 @@
 
 int main()
 {
-	char	src[] = "lorem ipsum dolor sit amet";
-	char	*dest;
+	t_list *l;
+	t_list *expected;
+	t_list *actual;
 
-	dest = src + 1;
-	printf("%p\n", &dest);
-	printf("%p\n", ft_memmove(src, dest, 8));
-	return (0);
+	l = ft_lstnew(strdup("1"));
+	l->next = ft_lstnew(strdup("2"));
+	l->next->next = ft_lstnew(strdup("3"));
+	expected = l->next->next;
+	actual = ft_lstlast(l);
+	if (&expected != &actual)
+		printf("1\n");
 }
