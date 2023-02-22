@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
+/*   By: debizhan <debizhan@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 19:22:07 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/19 14:49:52 by dbizjano         ###   ########.fr       */
+/*   Updated: 2023/02/22 23:28:17 by debizhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 	unsigned char	c2;
 
 	i = 0;
+	if (n <= 0)
+		return (0);
 	while (n--)
 	{
 		c1 = str1[i];
 		c2 = str2[i];
-		if (c1 != c2 || str1[i] == '\0')
+		if (c1 != c2 || str1[i] == '\0' || str2[i] == '\0')
 			break ;
 		i++;
 	}

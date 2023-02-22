@@ -6,7 +6,7 @@
 #    By: debizhan <debizhan@students.42wolfsburg    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/16 12:46:43 by dbizjano          #+#    #+#              #
-#    Updated: 2023/02/22 22:14:28 by debizhan         ###   ########.fr        #
+#    Updated: 2023/02/22 23:29:50 by debizhan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ so:
 compile:
 	$(CC) $(FLAG) $(COMP) -o libft
 clean: 
-				$(RM)	$(OBJ)
+				$(RM)	$(OBJ) *.so
 
 fclean:			clean
 				$(RM)	$(NAME)			

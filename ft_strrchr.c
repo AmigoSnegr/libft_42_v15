@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
+/*   By: debizhan <debizhan@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 19:39:24 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/18 22:18:54 by dbizjano         ###   ########.fr       */
+/*   Updated: 2023/02/22 23:10:32 by debizhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,19 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	const char	*ptr;
+	char	*ptr;
 
-	if (*str == '\0')
-	{
-		return (NULL);
-	}
+	ptr = NULL;
 	if (!ft_isascii(c))
-	{
 		return (NULL);
-	}
 	while (*str)
 	{
 		if (*str == c)
-		{
-			ptr = str;
-		}
+			ptr = (char *)str;
 		str++;
 	}
-	if (c == '\0')
+	if (*str == c)
 		return ((char *)str);
-	if (*ptr != 0)
-		return ((char *)ptr);
-	return (NULL);
+	else
+		return (ptr);
 }

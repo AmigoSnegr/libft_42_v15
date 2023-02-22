@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
+/*   By: debizhan <debizhan@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 13:43:20 by dbizjano          #+#    #+#             */
-/*   Updated: 2023/01/20 23:25:16 by dbizjano         ###   ########.fr       */
+/*   Updated: 2023/02/22 23:15:19 by debizhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbizjano <dbizjano@students.42wolfsburg    +#+  +:+       +#+        */
+/*   By: debizhan <debizhan@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 13:12:12 by dbizjano          #+#    #+#             */
-/*   Updated: 2022/12/22 21:19:00 by dbizjano         ###   ########.fr       */
+/*   Updated: 2023/02/22 23:14:51 by debizhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 		{
 			return ((void *)str);
 		}
-		(void *)str++;
+		(void *)((char *)str + 1);
 	}
 	return (NULL);
 }
