@@ -6,7 +6,7 @@
 #    By: debizhan <debizhan@students.42wolfsburg    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/16 12:46:43 by dbizjano          #+#    #+#              #
-#    Updated: 2023/02/23 17:28:30 by debizhan         ###   ########.fr        #
+#    Updated: 2023/02/23 17:54:47 by debizhan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,15 +29,12 @@ all:			$(NAME)
 
 $(NAME):		$(OBJ)
 				ar rcs	$(NAME) $(OBJ)
-so:
-		$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-		gcc -nostartfiles -shared -o libft.so $(OBJ)
 bonus: $(BOBJ)
 	ar rcs	$(NAME) $(BOBJ)
 compile:
 	$(CC) $(FLAG) $(COMP) -o libft
 clean: 
-				$(RM)	$(OBJ)  $(BOBJ) *.so
+				$(RM)	$(OBJ)  $(BOBJ)
 
 fclean:			clean
 				$(RM)	$(NAME)			
